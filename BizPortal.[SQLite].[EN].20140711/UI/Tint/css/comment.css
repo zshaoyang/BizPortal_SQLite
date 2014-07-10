@@ -1,0 +1,81 @@
+﻿body {
+    background: none repeat scroll 0 0 #F2F2F2;
+}
+
+#content {
+    width:100%;font-size:12px;background-color:#FFF;
+}
+
+#content h2 {
+    clear:both; display:block; font-size:18px; color:#0165B3;font-weight:bold;border-bottom:1px solid #D9D9D9;box-shadow: 0 3px 3px #E6E6E6;margin-bottom:5px;text-indent:10px;
+}
+
+.comment_box {
+    border:1px solid #D9D9D9;box-shadow: 0 3px 3px #E6E6E6;background-color:#FFFFFF;
+}
+
+#message_board_content{
+	margin-top: 20px;display:block;color: #4B5A61;width:96%;margin:0 auto;padding-top:7px;padding-bottom:8px;margin-bottom:15px;
+}
+#message_board_content table{
+	border: 0 none;
+}
+#message_board_content p{
+	line-height: 180%; margin-bottom: 8px; text-indent: 2em;
+}
+
+.post_comment_panel {
+    color:#666666;
+}
+.post_comment_panel .txt{
+    border:1px solid #CCCCCC;border-radius:2px;padding:2px;
+}
+.post_comment_panel .post_title .txt{
+    width:400px;
+}
+.post_comment_panel .author_name, .post_comment_panel .author_email, .post_comment_panel .post_title, .post_comment_panel .post_submit{
+    height:25px;line-height:25px;vertical-align:middle;padding-left:15px;padding-top:4px;padding-bottom:4px;
+}
+.post_comment_panel .comment_content{
+    vertical-align:middle;padding-left:15px;
+}
+.post_comment_panel .submit{
+    background-color:#0165B3;color:#FFF;border:1px solid #CCCCCC;padding:3px 7px 3px 7px;
+}
+
+.comment_list{
+}
+.comment_list .comment_item{
+	border-bottom: 1px solid #DDDDDD; padding: 10px;
+}
+.comment_list .comment_item .comment_title{
+	display:block;
+}
+.comment_list .comment_item .comment_body{
+	margin-top: 20px;display:block;color: #4B5A61;width:96%;margin:0 auto;padding-top:3px;padding-bottom:8px;
+}
+.comment_list .comment_item .comment_body table{
+	border: 0 none;
+}
+.comment_list .comment_item .comment_body p{
+	line-height: 180%; margin-bottom: 8px; text-indent: 2em;
+}
+.comment_list .comment_item .comment_reply{
+	border-top: 1px dotted #EEEEEE;padding-left:25px;padding-top:8px;background-color:#f2f0f0;
+}
+.comment_list .comment_item .comment_title h5{
+	font-size: 14px; margin: 0 0 5px; padding: 0;color: #6699CC;outline: medium none;
+}
+.comment_list .comment_item .comment_title h5 a{
+	text-decoration:none;
+}
+.comment_list .comment_item .comment_title .info{
+	color: #A3BB50; display: block;color: #A3BB50;
+}
+.comment_list .comment_item .comment_reply .comment_title h5{
+	color:#4684c2;
+}
+
+.pager{
+	float:left;padding-left:5px;
+}

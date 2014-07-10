@@ -1,0 +1,38 @@
+﻿<div class="pager">
+<% if (CurrentPager.RecordCount > 0){ %>
+    <span class="count_info"><%=CurrentPager.CountInfo %></span>
+    <% if(CurrentPager.PageIndex > 1){ %>
+    <a href="<%=CurrentPager.GetUrl(1) %>">1</a>
+     <% if(CurrentPager.StartPage - 1 > 1){ %>
+    <span class="text">...</span>
+     <% } %>
+    <% } else { %>
+    <span class="current">1</span>
+    <% } %>
+
+    <% for(int p = CurrentPager.StartPage; p <= CurrentPager.EndPage; p ++){ %>
+      <% if(p == 1 || p == CurrentPager.TotalPage){ continue; } %>
+      <% if(CurrentPager.PageIndex == p){ %>
+    <span class="current"><%=p %></span>  
+      <% } else { %>
+    <a href="<%=CurrentPager.GetUrl(p) %>"><%=p %></a>
+      <% } %>
+    <% } %>
+
+    <% if(CurrentPager.TotalPage > 1){ %>
+     <% if(CurrentPager.PageIndex < CurrentPager.TotalPage){ %>
+      <% if(CurrentPager.TotalPage - CurrentPager.EndPage > 1){ %>
+    <span class="text">...</span>
+      <% } %>
+    <a href="<%=CurrentPager.GetUrl(CurrentPager.TotalPage) %>"><%=CurrentPager.TotalPage %></a>
+     <% } else { %>
+    <span class="current"><%=CurrentPager.TotalPage %></span>
+     <% } %>
+    <% } %>
+
+<% } else { %>
+    <div class="pager_nodata"><%=CurrentPager.NoDataInfo %></div>
+<% } %>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>

@@ -1,0 +1,1 @@
+﻿STEditor.Lang["zh-cn"]["code_command"] = '插入代码区块';

@@ -1,0 +1,57 @@
+﻿    <div id="jumper" style="bottom: 20px;"><a id="jumpTop" title="<%=LangRes.Get("BackToTop") %>" href="javascript:void(0)" data-scroll="#body"></a></div>    
+
+    <div id="foot">
+        <div id="foot_wrap">
+            <div class="buttons">
+                <% if(AllNavMenuDic.ContainsKey(NavMenuPosition.FootTool)){ %>
+                <ul id="foot_tool_list">
+
+                <% if(AllNavMenuDic.ContainsKey(NavMenuPosition.FootTool)){ %>
+                    <% foreach (NavMenu menu in AllNavMenuDic[NavMenuPosition.FootTool]){ %>
+                    <li class="tool">
+                        <a href="<%=menu.Link %>" title="<%=menu.Title %>" id="FootToolMenu_<%=menu.MenuId %>" class="tool_link"><%=menu.Name %></a>
+                        <% if(menu.ChildMenuList != null && menu.ChildMenuList.Count > 0){ %>
+                        <div id="FootToolMenuChilds_<%=menu.MenuId %>" class="none">
+                            <div class="pop_menu_container">
+                                <ul class="pop_menu_list">
+                                <% foreach(NavMenu childMenu in menu.ChildMenuList){ %>
+                                    <li class="pop_menu_item"><a href="<%=childMenu.Link %>" title="<%=childMenu.Title %>"><%=childMenu.Name %></a></li>
+                                <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            MenuList["FootToolMenu_<%=menu.MenuId %>"] = "FootToolMenuChilds_<%=menu.MenuId %>";
+                        </script>
+                        <% } %>
+                    </li>
+                    <% } %>
+                <% } %>
+                </ul>
+                <% } %>
+                <div class="clear"></div>
+            </div>
+
+            <script type="text/javascript">
+                $(function () {
+                    HoverMenuHelper.Init(MenuList, { "Position": 3, "ActiveMenuCss": "active", "IsFixed": true });
+
+                    SetSearchType();
+                });
+            </script>
+
+            <div class="copyright">
+                <%=SiteSetting.Copyright %>
+                &nbsp;&nbsp;
+                <% if(!string.IsNullOrEmpty(SiteSetting.GovRecord)) { %>
+                <%=SiteSetting.GovRecord %>
+                <% } %>
+                &nbsp;
+                <%=SiteSetting.SiteCountCode %>
+            </div>
+        </div>
+    </div>
+
+    <%=DisplaySetting.GlobalAppendCode %>
+
+

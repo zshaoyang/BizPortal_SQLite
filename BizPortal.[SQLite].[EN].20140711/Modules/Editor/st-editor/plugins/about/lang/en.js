@@ -1,0 +1,1 @@
+﻿STEditor.Lang["en"]["about_command"] = 'about';

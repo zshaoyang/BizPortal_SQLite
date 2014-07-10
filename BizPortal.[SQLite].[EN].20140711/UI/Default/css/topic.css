@@ -1,0 +1,25 @@
+﻿#topic_panel{
+	width:950px;float:left;
+}
+#topic_panel.small{
+	width:710px;
+}
+
+#topic_panel h2{
+	border-bottom: 1px solid #A8B5BD; color: #51B400; font-size: 16px; padding-bottom: 10px; padding-left: 24px;font-weight:bold;
+    display:block;clear:both;
+}
+
+.channel_topic_list{
+	overflow: hidden; z-index: 1;background-image:url('../images/line_bg.jpg');background-position:-460px top;background-repeat:repeat-y;
+}
+.channel_topic_list li{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);list-style: none outside none;border-left:1px solid #EEEEEE;border-right:1px solid #EEEEEE;
+}
+.channel_topic_list li a{
+	border-bottom: 1px solid #DDE6EB; color: #0097C9; display: block; font-size: 12px; font-weight: 400; 
+	margin: 0 3px; padding: 12px 30px 8px 50px; text-decoration: none;
+}
+.channel_topic_list li a:hover, .channel_topic_list li a.current{
+	color:#53B402;
+}

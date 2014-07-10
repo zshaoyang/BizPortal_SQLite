@@ -1,0 +1,1 @@
+﻿STEditor.Lang["en"]["code_command"] = 'add code block';

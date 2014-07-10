@@ -1,0 +1,12 @@
+﻿.STEditorContainer_classic .STEditorHeaderFormatTable {
+    margin: 8px; background: #efefde; border: #999999 1px solid;  padding-top:8px; padding-bottom:8px;display:block;width:400px;overflow:auto;
+}
+.STEditorContainer_classic .STEditorHeaderFormatTable .title{
+    font-weight:bold; font-size:14px; line-height:15px; height:15px; vertical-align:middle;text-indent:10px;
+}
+.STEditorContainer_classic .STEditorHeaderFormatTable .item{
+    padding:5px;
+}
+.STEditorContainer_classic .STEditorHeaderFormatTable .header_format {
+    cursor:pointer;
+}

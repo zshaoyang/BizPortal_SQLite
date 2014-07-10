@@ -1,0 +1,96 @@
+﻿.STEditorContainer_default {
+    background: none repeat scroll 0 0 #F0F0EE;
+    background: -moz-linear-gradient(center top , #F5F5F5, #CFD1CF) repeat scroll 0 0 #CFD1CF;
+    border: 1px solid #CCCCCC;
+    margin: 0;
+    position: relative;
+}
+.STEditorContainer_default img {
+    border:0;
+}
+.STEditorContainer_default a, .STEditorContainer_default a:hover {
+    text-decoration:none;
+}
+.STEditorContainer_default .source_textbox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    font-size: 12px;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+.STEditorContainer_default .STEditorToolbarPanel {
+    display:block;clear:both;border-bottom:1px solid #DDDDDD;
+}
+.STEditorContainer_default .STEditorToolbarPanel a {
+    height:15px;overflow:hidden;cursor: pointer;
+}
+.STEditorContainer_default .STEditorToolbarPanel a.toolbar_item {
+    display:block;float:left;padding:6px;width:16px;height:16px;
+}
+.STEditorContainer_default .STEditorToolbarPanel a.toolbar_item:hover, .STEditorToolbarPanel a.toolbar_item_active {
+    display:block;float:left;padding:6px;background-color:#DDDDDD;width:16px;height:16px;
+}
+.STEditorContainer_default .STEditorToolbarPanel a.toolbar_item span {
+    display:block;width:16px;height:16px;
+}
+.STEditorContainer_default .STEditorToolbarPanel a.toolbar_item:hover span, .STEditorToolbarPanel a.toolbar_item_active span{
+    display:block;width:16px;height:16px;
+}
+.STEditorContainer_default .STEditorToolbarPanel .toolbar_seperator {
+    display:block;float:left;border-left:1px solid #DDDDDD;vertical-align:middle;height:27px;width:0px;
+}
+.STEditorContainer_default .STEditorToolbarPanel .toolbar_line {
+    clear:both;height:0;width:99%;margin:0 auto;border-top:1px solid #DDDDDD;
+}
+.STEditorContainer_default .STEditorArea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0;
+}
+.STEditorContainer_default .STEditorMaskPanel {
+	margin: 0px; padding: 2px;
+}
+.STEditorContainer_default .STEditorMaskPanel img {
+	cursor: pointer; padding: 2px; border: #efefde 1px solid;
+}
+.STEditorContainer_default .STEditorMaskPanel img.selected {
+	cursor: pointer; padding: 2px; border: #316ac5 1px solid; background: #dff1ff;
+}
+.STEditorContainer_default .STEditorMaskPanelInner {
+    position: relative;
+}
+.STEditorContainer_default .STEditorMaskPanelCloser {
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 6px;
+}
+
+.STEditorContainer_default .STEditorColorPickerTable {
+	margin: 0px; background: #F0F0EE; border: #999999 1px solid;
+}
+.STEditorContainer_default .STEditorColorPickerTable td {
+	font-size: 12px; font-weight: bold;
+}
+.STEditorContainer_default .STEditorColorPickerTable td img {
+	width: 11px; height: 11px; vertical-align: top; cursor: pointer; border: #999999 1px solid;
+}
+
+.STEditorContainer_default .STEditor_Common_Table {
+    margin: 8px; background: #F0F0EE; border: #999999 1px solid; padding-top:8px; padding-bottom:8px;
+}
+.STEditorContainer_default .STEditor_Common_Table .title{
+    font-weight:bold; font-size:14px; line-height:15px; height:15px; vertical-align:middle;background-color:#eeeeee;text-indent:10px;
+}
+.STEditorContainer_default .STEditor_Common_Table .item{
+    padding:5px;
+}
+.STEditorContainer_default .STEditor_Common_Table .item .text{
+    margin: 0px; padding: 0px; vertical-align: middle;width: 240px; height: 16px; padding: 2px; border: #999999 1px solid;
+}
+.STEditorContainer_default .STEditor_Common_Table .tool{
+    text-align:right;padding:5px;
+}
+.STEditorContainer_default .STEditor_Common_Table .tool .btn{
+    height: 22px; padding: 0px 5px 0px 5px; background: #dedede; border: #999999 1px solid;
+}

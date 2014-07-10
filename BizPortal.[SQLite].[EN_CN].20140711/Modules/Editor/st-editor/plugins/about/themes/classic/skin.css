@@ -1,0 +1,27 @@
+﻿.STEditorContainer_classic .STEditorAboutBox {
+	margin: 0px; background: #efefde; border: #999999 1px solid;
+}
+.STEditorContainer_classic .STEditorAboutBox td {
+	font-size: 12px; font-weight: bold;
+}
+.STEditorContainer_classic .STEditorAboutBox td.title {
+	border-bottom:1px solid #CCCCCC;padding-top:3px;padding-bottom:3px;
+}
+.STEditorContainer_classic .STEditorAboutBox td.item {
+	padding-top: 2px; padding-bottom: 2px; text-align: right;
+}
+.STEditorContainer_classic .STEditorAboutBox td span {
+	padding-left: 30px; padding-right: 30px; color: #333333; font-weight : normal;
+}
+.STEditorContainer_classic .STEditorAboutBox td a {
+	font-family: georgia; color: #316ac5; text-decoration: none;
+}
+.STEditorContainer_classic .STEditorAboutBox td a:hover {
+	font-family: georgia; color: #316ac5; text-decoration: underline;
+}
+.STEditorContainer_classic .STEditorAboutBox td input {
+	margin: 0px; padding: 0px; vertical-align: middle;
+}
+.STEditorContainer_classic .STEditorAboutBox td input.btn {
+	height: 22px; padding: 0px 5px 0px 5px; background: #dedede; border: #999999 1px solid;
+}

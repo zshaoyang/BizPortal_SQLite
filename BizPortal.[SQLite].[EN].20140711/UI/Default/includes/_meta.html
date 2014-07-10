@@ -1,0 +1,47 @@
+﻿    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+
+    <title><%=PageTitle %></title>
+
+    <% if(!string.IsNullOrEmpty(PageKeywords)){ %>
+    <meta name="Keywords" content="<%=PageKeywords %>" />
+    <% } %>
+    <% if(!string.IsNullOrEmpty(PageDescription)){ %>
+    <meta name="Description" content="<%=PageDescription %>" />
+    <% } %>
+
+    <% if(!string.IsNullOrEmpty(DisplaySetting.FavIconPath)){ %>
+    <link rel="icon" href="<%=DisplaySetting.FavIconWebPath %>" type="image/x-icon" />
+	<link rel="shortcut icon" href="<%=DisplaySetting.FavIconWebPath %>" type="image/x-icon" />
+	<link rel="Bookmark" href="<%=DisplaySetting.FavIconWebPath %>" type="image/x-icon"/>
+    <% } %>
+    <link type="text/css" rel="Stylesheet" href="<%=SkinRoot %>css/global.css?v=<%=AppInfo.Build %>" />
+
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/sleeping-tiger-lib/sleeping-tiger-lib-min.js?v=<%=AppInfo.Build %>"></script>
+
+    <script type="text/javascript">
+        var WEB_ROOT = "<%=WebRoot %>";
+        var SKIN_ROOT = "<%=SkinRoot %>";
+
+        var MenuList = {};
+
+        function SetSearchType() {
+            var productSearchUrl = "<%=URL("SearchProductsPage")%>";
+            var articleSearchUrl = "<%=URL("SearchArticlesPage")%>";
+
+            var st = parseInt($("#st").val());
+            switch(st){
+                case 1:
+                    $("#QuickSearchForm").attr("action", articleSearchUrl);
+                    break;
+                case 0:
+                default:
+                    $("#QuickSearchForm").attr("action", productSearchUrl);
+                    break;
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/content/global-min.js?v=<%=AppInfo.Build %>"></script>

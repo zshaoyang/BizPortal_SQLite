@@ -1,0 +1,1 @@
+﻿STEditor.Lang["zh-cn"]["quote_command"] = '插入引用区块';

@@ -1,0 +1,29 @@
+﻿html,body {
+	background: transparent;
+}
+body {
+	margin: 5px; font-size: 12px; line-height: 150%; font-family: arial,verdana,sans-serif;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+.ubb_code_container {
+    border-color: #CCCCCC #CCCCCC #CCCCCC #BC0066;
+    border-image: none;
+    border-style: solid;
+    border-width: 3px 3px 3px 7px;
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-style: italic;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 8px;
+}
+.ubb_quote_container {
+    border: #dcdcdc 1px dotted; padding: 5px; line-height: 150%;
+}
+.post_anchor {
+    display:block;width:16px;height:16px;background-image:url('images/tool/anchor.gif');float:right;
+}
+.post_img {
+    border:0;
+}

@@ -1,0 +1,21 @@
+.info_table {
+
+}
+.info_table .info {
+    color: #666666;
+}
+.info_table thead th {
+    font-size:14px;color:#000;text-align:left;
+}
+.list_table thead th#comment_table_title {
+    padding-left:19px;background-image:url('../image/simple_comment.gif');background-repeat:no-repeat;height:16px;line-height:16px;vertical-align:middle;
+    background-color:#FFF;font-size:14px;background-position:left center;
+}
+.info_table #stat_title {
+    padding-left:19px;background-image:url('../image/simple_stat.gif');background-repeat:no-repeat;height:16px;line-height:16px;vertical-align:middle;
+    background-position:left center;
+}
+.info_table #sysinfo_title {
+    padding-left:19px;background-image:url('../image/simple_info.gif');background-repeat:no-repeat;height:16px;line-height:16px;vertical-align:middle;
+    background-position:left center;
+}
