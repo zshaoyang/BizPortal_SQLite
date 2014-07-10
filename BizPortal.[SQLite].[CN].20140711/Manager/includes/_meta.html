@@ -1,0 +1,43 @@
+﻿
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title><%=PageTitle %></title>
+
+    <link rel="icon" href="<%=WebRoot %>favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="<%=WebRoot %>favicon.ico" type="image/x-icon" />
+    <link rel="Bookmark" href="<%=WebRoot %>favicon.ico" type="image/x-icon"/>
+
+    <link href="<%=AdminRoot %>css/global.css?v=20131224" type="text/css" rel="Stylesheet" />
+
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/jquery/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="<%=WebRoot %>Scripts/sleeping-tiger-lib/sleeping-tiger-lib-min.js?v=20131224"></script>
+    <script type="text/javascript" src="<%=AdminRoot %>js/global-min.js?v=20131231"></script>
+
+    <script type="text/javascript">
+        var WEB_ROOT = "<%=WebRoot %>";
+        var ADMIN_AUTH = "<%=CurrentAdmin.AuthString %>";
+
+        $(function () {
+            var scrollTop = $(document).scrollTop();
+
+            var currentMenuId = '<%=PageId%>Menu';
+            var menusTop = null;
+            var header = $("#header");
+            if (header[0]) {
+                var fixHeaderTop = scrollTop;
+                menusTop = fixHeaderTop + header.height();
+            }
+
+            HoverMenuHelper.Init({
+                "AdminContentPageMenu": "content_manager_nav",
+                "AdminSettingPageMenu": "sys_config_manager_nav"
+            }, {
+                "Position": 6,
+                "ActiveMenuCss": "current",
+                "CurrentMenuId": currentMenuId,
+                "DefaultShowCurrentMenu": true,
+                "FixTopPix": 5
+            });
+        });
+    </script>

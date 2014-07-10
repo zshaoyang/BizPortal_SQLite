@@ -1,0 +1,173 @@
+﻿    <div id="head">
+        <div id="head_top">
+            <h1><a href="<%=WebRoot %>" title="<%=SiteSetting.SiteName %>"><img src="<%=Helper.IF(string.IsNullOrEmpty(DisplaySetting.LogoPath), SkinRoot + "logo.jpg", DisplaySetting.LogoWebPath) %>" id="logo" alt="<%=SiteSetting.SiteName %>" title="<%=SiteSetting.SiteName %>" /></a></h1>
+            
+            <div style="float:right;width:650px;">
+                <% if(AllNavMenuDic.ContainsKey(NavMenuPosition.TopTool) || DisplaySetting.OpenMessageBoard){ %>
+                <ul id="top_tool_list">
+                <% if(AllNavMenuDic.ContainsKey(NavMenuPosition.TopTool)){ %>
+                <% foreach(NavMenu menu in AllNavMenuDic[NavMenuPosition.TopTool]){ %>
+                    <li class="tool">
+                        <a href="<%=menu.Link %>" title="<%=menu.Title %>" id="TopToolMenu_<%=menu.MenuId %>" class="tool_link"><%=menu.Name %></a>
+                        <% if(menu.ChildMenuList != null && menu.ChildMenuList.Count > 0){ %>
+                        <div id="TopToolMenuChilds_<%=menu.MenuId %>" class="none">
+                            <ul class="pop_menu_list">
+                            <% foreach(NavMenu childMenu in menu.ChildMenuList){ %>
+                                <li class="pop_menu_item"><a href="<%=childMenu.Link %>" title="<%=childMenu.Title %>"><%=childMenu.Name %></a></li>
+                            <% } %>
+                            </ul>
+                        </div>
+                        <script type="text/javascript">
+                            MenuList["TopToolMenu_<%=menu.MenuId %>"] = "TopToolMenuChilds_<%=menu.MenuId %>";
+                        </script>
+                        <% } %>
+                    </li>
+                <% } %>
+                <% } %>
+
+                <% if(DisplaySetting.OpenMessageBoard){ %>
+                    <li class="tool">
+                        <a href="<%=URL("MessageBoardPage") %>" title="<%=LangRes.Get("MessageBoard") %>" class="tool_link"><%=LangRes.Get("MessageBoard") %></a>
+                    </li>
+                <% } %>
+                </ul>
+                <% } %>
+
+                <div class="clear"></div>
+
+                <div id="site_head_signature"><%=SiteSetting.SiteHeadSignature %></div>
+
+                <% if(DisplaySetting.OpenProductModule || DisplaySetting.OpenArticleModule){ %>
+                <div id="quick_search_bar">
+                    <form id="QuickSearchForm" method="get" action="<%=Helper.IF(PageId == "ArticlePage", URL("SearchArticlesPage"), URL("SearchProductsPage")) %>">
+                        <input type="text" id="txtKeywords" name="kw" value="<%=Helper.Get("kw") %>" class="txt" />
+                        <select id="st" name="st" class="txt" onchange="SetSearchType();">
+                        <% if(DisplaySetting.OpenProductModule){ %>
+                            <option value="0" <%=Helper.IF(PageId == "ProductPage", "selected='selected'") %>><%=LangRes.Get("Product") %></option>
+                        <% } %>
+                        <% if(DisplaySetting.OpenArticleModule){ %>
+                            <option value="1" <%=Helper.IF(PageId == "ArticlePage", "selected='selected'") %>><%=LangRes.Get("News") %></option>
+                        <% } %>
+                        </select>
+                        <input type="submit" value="<%=LangRes.Get("Search")%>" class="btn" />
+                    </form>
+                </div>
+                <% } %>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li class="menu_item"><a id="home_menu" href="<%=URL("HomePage") %>" class="menu_link<%=IF_PAGE(" active", "GlobalPage", "HomePage") %>" title="<%=LangRes.Get("HomePage") %>"><%=LangRes.Get("HomePage") %></a></li>
+            <% if (DisplaySetting.CustomizeMainNavigation && AllNavMenuDic.ContainsKey(NavMenuPosition.Main) && AllNavMenuDic[NavMenuPosition.Main].Count > 0){ %>
+                <% foreach (NavMenu menu in AllNavMenuDic[NavMenuPosition.Main]){ %>
+                <li class="menu_item">
+                    <a href="<%=menu.Link %>" title="<%=menu.Title %>" id="MainMenu_<%=menu.MenuId %>" class="menu_link"><%=menu.Name %></a>
+                    <% if(menu.ChildMenuList != null && menu.ChildMenuList.Count > 0){ %>
+                    <div id="MainMenuChilds_<%=menu.MenuId %>" class="none">
+                        <ul class="pop_menu_list">
+                        <% foreach(NavMenu childMenu in menu.ChildMenuList){ %>
+                            <li class="pop_menu_item"><a href="<%=childMenu.Link %>" title="<%=childMenu.Title %>"><%=childMenu.Name %></a></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        MenuList["MainMenu_<%=menu.MenuId %>"] = "MainMenuChilds_<%=menu.MenuId %>";
+                    </script>
+                    <% } %>
+                </li>
+                <% } %>
+            <% } else { %>
+                <% if(DisplaySetting.OpenProductModule){ %>
+                <li class="menu_item">
+                    <a id="product_menu" href="<%=URL("ProductListPage") %>" class="menu_link<%=IF_PAGE(" current", "ProductPage") %>" title="<%=LangRes.Get("Product") %>"><%=LangRes.Get("Product") %></a>
+                    <% if(RootCategoryList.Count > 0){ %>
+                    <div id="CategoryListMenu" class="none">
+                        <ul class="pop_menu_list">
+                        <% foreach(Category category in RootCategoryList){ %>
+                            <li class="pop_menu_item"><a href="<%=URL("CategoryPage", category.UrlName) %>" title="<%=category.Name %>"><%=category.Name %></a></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        MenuList["product_menu"] = "CategoryListMenu";
+                    </script>
+                    <% } %>
+                </li>
+                <%} %>
+                <% if(DisplaySetting.OpenArticleModule){ %>
+                <li class="menu_item">
+                    <a id="article_menu" href="<%=URL("ArticleListPage") %>" class="menu_link<%=IF_PAGE(" current", "ArticlePage") %>" title="<%=LangRes.Get("NewsOrActivity") %>"><%=LangRes.Get("NewsOrActivity") %></a>
+
+                    <% if(RootArticleCategoryList.Count > 0){ %>
+                    <div id="ArticleCategoryListMenu" class="none">
+                        <ul class="pop_menu_list">
+                        <% foreach(ArticleCategory category in RootArticleCategoryList){ %>
+                            <li class="pop_menu_item"><a href="<%=URL("ArticleCategoryPage", category.UrlName) %>" title="<%=category.Name %>"><%=category.Name %></a></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        MenuList["article_menu"] = "ArticleCategoryListMenu";
+                    </script>
+                    <% } %>
+                </li>
+                <%} %>
+
+                <% if(DisplaySetting.OpenTopicModule)
+                   {
+                       for(int c = 0; c < AllChannelList.Count && c < 3; c++){
+                           Channel channel = AllChannelList[c];
+                           if (channel.FirstTopic == null) { continue; }
+                %>
+                <li class="menu_item">
+                    <a href="<%=URL("TopicDetailPage", channel.FirstTopic.UrlName) %>" title="<%=channel.Name %>" class="menu_link" id="ChannelMenu_<%=channel.ChannelId %>"><%=channel.Name %></a>
+                    <% if(channel.SimpleTopicList.Count > 1){ %>
+                    <div id="ChannelTopicsMenu_<%=channel.ChannelId %>" class="none">
+                        <ul class="pop_menu_list">
+                        <% for(int l = 0; l < channel.SimpleTopicList.Count && l < 3; l++)
+                           { 
+                            Topic channelTopic = channel.SimpleTopicList[l];
+                        %>
+                            <li class="pop_menu_item"><a href="<%=URL("TopicDetailPage", channelTopic.UrlName) %>" title="<%=channelTopic.Title %>"><%=channelTopic.Title %></a></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        MenuList["ChannelMenu_<%=channel.ChannelId %>"] = "ChannelTopicsMenu_<%=channel.ChannelId %>";
+                    </script>
+                    <% } %>
+                </li>
+                <%      }
+                    } 
+                %>
+
+                <% if(AllNavMenuDic.ContainsKey(NavMenuPosition.Main) && AllNavMenuDic[NavMenuPosition.Main].Count > 0){
+                    foreach (NavMenu menu in AllNavMenuDic[NavMenuPosition.Main]){ 
+                %>
+                <li class="menu_item">
+                    <a href="<%=menu.Link %>" title="<%=menu.Title %>" id="MainMenu_<%=menu.MenuId %>" class="menu_link"><%=menu.Name %></a>
+                    <% if(menu.ChildMenuList != null && menu.ChildMenuList.Count > 0){ %>
+                    <div id="MainMenuChilds_<%=menu.MenuId %>" class="none">
+                        <ul class="pop_menu_list">
+                        <% foreach(NavMenu childMenu in menu.ChildMenuList){ %>
+                            <li class="pop_menu_item"><a href="<%=childMenu.Link %>" title="<%=childMenu.Title %>"><%=childMenu.Name %></a></li>
+                        <% } %>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        MenuList["MainMenu_<%=menu.MenuId %>"] = "MainMenuChilds_<%=menu.MenuId %>";
+                    </script>
+                    <% } %>
+                </li>
+                <% }
+                 }%>
+
+            <% } %>
+            </ul>
+        </div>
+    </div>

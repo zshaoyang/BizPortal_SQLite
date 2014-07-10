@@ -1,0 +1,168 @@
+﻿body {
+    background: none repeat scroll 0 0 #F2F2F2;
+}
+#side {
+    float:left;width:230px;background: none repeat scroll 0 0 #FFFFFF; 
+}
+#category_tree {
+    padding:6px 10px;
+}
+#category_tree a {
+    text-decoration:none;color:#010101;font-size:12px;
+}
+#category_tree .category_list {
+    
+}
+#category_tree .category_list li {
+    display:block;background-color:#E5E5E5;border-bottom:1px solid #F2F2F2;
+}
+#category_tree .category_list li a {
+    display:block;padding-top:8px;padding-bottom:8px;padding-left:10px;
+}
+#category_tree .category_list li a:hover, #category_tree .category_list li a.current {
+    background-color:#0165B3; color:#FFFFFF;
+}
+#category_tree .category_list li .category_list li{
+    display:block;background-color:#F5F5F5;
+}
+#category_tree .category_list li .category_list li a{
+    padding-left:20px;
+}
+
+#content {
+    float:right;width:720px;background-color:#FFF;
+}
+#content h2 {
+    clear:both; display:block; font-size:18px; color:#0165B3;font-weight:bold;border-bottom:1px solid #D9D9D9;box-shadow: 0 3px 3px #E6E6E6;margin-bottom:5px;
+}
+
+#side .panel{
+	border: 1px solid #D9D9D9;box-shadow: 0 3px 3px #E6E6E6;width:222px;
+}
+.panel .product_list {
+    clear: both; display:block;
+}
+.panel .product_list .product_item {
+    width:145px;_width:143px;height:165px;overflow:hidden;float:left;background-color:#D9D9D9;display:block;
+    border:1px solid #CBCBCD;
+    padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;margin-left:5px;margin-right:5px;margin-top:10px;margin-bottom:10px;
+}
+.panel .product_list .product_item_inner {
+    background-color:#FFF;width:135px;height:155px;overflow:hidden;padding:5px;
+}
+.panel .product_list .product_item.no_data {
+    text-align:center;float:none;clear:both;width:95%;margin:0 auto;line-height:180px;vertical-align:middle;background-color:#FFF;border:0;
+}
+.panel .product_list .product_item a{
+    display:block;font-size:12px;text-decoration:none;color:#333333;text-align:center;
+}
+.panel .product_list .product_item a.product_img_link{
+    width:115px;height:115px;margin:0 auto;overflow:hidden;border-radius:8px;margin-top:3px;
+}
+.pepanelrformance_panel .product_list .product_item a.product_img_link img{
+    max-width:100%;
+}
+.panel .product_list .product_item a:hover.product_img_link img{
+    opacity:0.65;filter:alpha(opacity=65);
+}
+.panel .product_list .product_item .product_name {
+    width:95%;margin:0 auto;font-weight:normal;font-size:12px;margin-top:8px;display:block;line-height:16px;_margin-top:12px;*margin-top:12px;
+}
+.panel .product_list .product_item .product_name a:hover {
+    color:#0165B3;
+}
+.line{
+	border-bottom:1px dashed #BDC1C1;width:98%;margin:0 auto;
+}
+
+#product_overview {
+    display:block;width:100%;padding-top:7px;
+}
+#product_overview  a{
+    text-decoration:none;color:#0097C9;
+}
+#product_logo {
+    float:left;width:600px;overflow:hidden;
+}
+#product_logo a{
+    display: table-cell; vertical-align:middle; text-align:center;
+}
+#product_logo img{
+    vertical-align:middle;
+}
+#product_info {
+    float:right;width:328px;_width:315px;color:#4B5A61;font-size:14px;border: 1px solid #E1E1E1;
+	margin-right:10px;padding:10px;background-color:#F5F5F5;
+}
+#product_info .info{
+    height:27px;line-height:27px;vertical-align:middle;width:99%;overflow:hidden;
+}
+#product_info .info .name{
+    display:block;float:left;width:38%;overflow:hidden;
+}
+#product_info .info .value{
+    display:block;float:left;width:60%;overflow:hidden;color:#0097C9;
+}
+#product_info .info .value a{
+    text-decoration:none;
+}
+
+#text_content {
+    line-height: 22px;color: #4B5A61;font-family: "微软雅黑",Verdana,Arial,Helvetica,sans-serif;padding:15px;
+}
+
+#product_attribute {
+    margin-bottom:15px;
+}
+#product_attribute .bar_wrap a.title{
+    color:#FFFFFF;
+}
+#product_attribute .bar_wrap a.active_title, #product_attribute .bar_wrap a:hover{
+    color:#000000;
+}
+#product_attribute .attribute_content{
+    line-height: 22px;color: #4B5A61;font-family: "微软雅黑",Verdana,Arial,Helvetica,sans-serif;width:900px;margin:0 auto;padding-left:10px;padding-right:10px;
+}
+#product_attribute_content{
+	
+}
+#product_attribute_content .attribute_item{
+	
+}
+
+
+.grid{
+	border-left: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF;
+}
+.grid .grid_bar{
+	height: 37px; padding-left: 14px; background-image: url("../images/carte_bar_bg.jpg"); background-repeat: repeat-x;
+}
+.grid_bar a.carte{
+	float:left;color: #FFFFFF; cursor: pointer; font-size: 14px; text-decoration: none; display:block;height: 33px; line-height:33px;vertical-align:middle;font-weight:bold;
+	margin-left:2px;margin-right:2px; 
+}
+.grid_bar a.carte .cl{
+	float:left;display:block;height: 33px;width:4px;background-image:url('../images/blue_carte_left_bg.jpg'); background-repeat:no-repeat; 
+}
+.grid_bar a.carte .cc{
+	float:left;display:block;height: 33px;line-height:33px;vertical-align:middle;background-image:url('../images/blue_carte_bg.jpg'); background-repeat:repeat-x; padding-left:15px;padding-right:15px;
+}
+.grid_bar a.carte .cr{
+	float:left;display:block;height: 33px;width:4px;background-image:url('../images/blue_carte_right_bg.jpg'); background-repeat:no-repeat; 
+}
+.grid_bar a:hover.carte, .grid_bar a.carte.active{
+	color: #555555; cursor: pointer; font-size: 14px; text-decoration: none; display:block;height: 33px; line-height:33px;vertical-align:middle;font-weight:bold;
+}
+.grid_bar a:hover.carte .cl, .grid_bar a.carte.active .cl{
+	float:left;display:block;height: 33px;width:4px;background-image:url('../images/carte_left_bg.jpg'); background-repeat:no-repeat; 
+}
+.grid_bar a:hover.carte .cc, .grid_bar a.carte.active .cc{
+	float:left;display:block;height: 33px;line-height:33px;vertical-align:middle;background-image:url('../images/carte_bg.jpg'); background-repeat:repeat-x; padding-left:15px;padding-right:15px;
+}
+.grid_bar a:hover.carte .cr, .grid_bar a.carte.active .cr{
+	float:left;display:block;height: 33px;width:4px;background-image:url('../images/carte_right_bg.jpg'); background-repeat:no-repeat; 
+}
+.grid .grid_box{
+	padding:10px;border-top:1px solid #EFEFEF;
+}
+

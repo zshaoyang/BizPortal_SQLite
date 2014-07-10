@@ -1,0 +1,1 @@
+﻿STEditor.Lang["zh-cn"]["about_command"] = '关于';

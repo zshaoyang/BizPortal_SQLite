@@ -1,0 +1,42 @@
+﻿    <script type="text/javascript" src="<%=Vars.EDITOR_MODULE_ROOT %><%=EditorSetting.DirectoryName %>/<%=EditorSetting.FileName %>"></script>
+    <script type="text/javascript">
+        var Editors = {};
+
+        function InitEditor(txtId){
+            <%=EditorSetting.InitCode.Replace("${text_id}", "txtId") %>
+        }
+
+        function InsertHtmlToEditor(txtId, html){
+            <%=EditorSetting.InsertHtmlCode.Replace("${text_id}", "txtId").Replace("${html}", "html") %>
+        }
+
+        function GetEditorHtml(txtId){
+            <%=EditorSetting.GetHtmlCode.Replace("${text_id}", "txtId") %>
+        }
+
+        
+        function InsertAttachToEditor(editorId, attachWebPath, attachName) {
+            var attachExt = "";
+            if (attachWebPath.indexOf(".") > 0) {
+                attachExt = attachWebPath.substring(attachWebPath.indexOf(".") + 1).toLowerCase();
+            }
+            var html = "";
+            switch (attachExt) {
+                case "jpg":
+                case "gif":
+                case "png":
+                case "ico":
+                case "bmp":
+                    html = '<img src="' + attachWebPath + '" alt="' + attachName + '" title="' + attachName + '" />';
+                    break;
+                default:
+                    html = '<a href="' + attachWebPath + '" title="' + attachName + '" target="_blank">' + attachName + '</a>';
+                    break;
+            }
+
+            InsertHtmlToEditor(editorId, html);
+
+            return false;
+        }
+
+    </script>

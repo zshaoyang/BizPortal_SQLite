@@ -1,0 +1,12 @@
+﻿.STEditorContainer_classic .STEditorSmileyTable {
+	margin: 0px; background: #efefde; border: #999999 1px solid;
+}
+.STEditorContainer_classic .STEditorSmileyTable td {
+	font-size: 12px; font-weight: bold;
+}
+.STEditorContainer_classic .STEditorSmileyTable td.title {
+	border-bottom:1px solid #CCCCCC;padding-top:3px;padding-bottom:3px;
+}
+.STEditorContainer_classic .STEditorSmileyTable td img {
+	cursor: pointer; margin: 3px; width: 19px; height: 19px;
+}

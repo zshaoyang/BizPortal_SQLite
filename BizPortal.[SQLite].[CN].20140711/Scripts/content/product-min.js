@@ -1,0 +1,2 @@
+function InitAttributeMenus(){var d=0;$("#product_attribute .attribute_menu").each(function(){var a=$(this),b=a.attr("data");b=$("#"+b);if(d==0){a.hasClass("active")||a.addClass("active");b.show()}else{a.removeClass("active");b.hide()}a.bind("click",function(){var e=$(this),c=a.attr("data");c=$("#"+c);$("#product_attribute .attribute_menu").each(function(){$(this).removeClass("active")});$("#product_attribute .attribute_item").each(function(){$(this).hide()});e.addClass("active");c.show()});d++})}
+;
